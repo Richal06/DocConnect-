@@ -30,6 +30,6 @@ DocConnect is a web application designed to offer far-flung access to healthcare
 
 ## Usage
 
-[Explain how users can use your project. Include examples, if applicable.]
-
+We are making a web platform that specializes in connecting patients with doctors for appointments, this means a seamless connection between the 2 events, making it smooth for patients to discover and book appointments with their desired clinical practitioners. By supplying both appointment reserving and video call capabilities also includes health monitoring system, we're making it convenient for patients to access scientific consultations from the consolation of their own homes. With Doc Connect, you now not must undergo the trouble of journeying a couple of websites to discover the right health practitioner, ebook an appointment, and order medicine. Our platform gives a unbroken and handy revel in, making it easy as a way to take control of your healthcare.
+The chatbot feature that predicts sicknesses primarily based on signs and symptoms and indicates primary medicines is a novel and revolutionary application of synthetic intelligence in healthcare. This function can assist improve affected person consequences and decrease the value of healthcare by way of presenting quick and correct diagnoses and medicine tips.
 
