@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://azukidigital.com/assets/blog/images/2020-02-heartrate/poster.png);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline;
+    margin: 0 10px;
+    font-size: 32px;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.graph-section {
+    width: 100%;
+    max-width: 600px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://127.0.0.1:8000">DocConnect</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/graph/graph">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Tracker
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/graph/heart">Heart Rate Monitioring</a></li>
+                    <li><a class="dropdown-item" href="/graph/temp">Body Temperature </a></li>
+                    <li><a class="dropdown-item" href="/graph/pulse">Pulse Rate Monitioring</a></li>
+                    {% comment %} <li><a class="dropdown-item" href="/graph/blood">Blood Saturation Monitioring</a></li> {% endcomment %}
+                </ul>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <header>
+            <img src="data:image/jpeg;base64,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" alt="Heart Icon">
+            <h1>Oxygen Saturation</h1>
+            <img src="data:image/jpeg;base64,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" alt="Heart Icon">
+        </header>
+        <main>
+            <div class="input-section">
+                <input type="number" id="heartRateInput" placeholder="Enter heart rate (in BPM)">
+                <button id="addDataButton">Add Data</button>
+                <button id="displayGraphButton">Display Graph</button>
+            </div>
+            <div class="graph-section">
+                <canvas id="heartRateChart"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

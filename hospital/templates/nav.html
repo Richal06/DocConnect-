@@ -1,0 +1,93 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">DocConnect</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/hospital">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/hospital/about">About Us</a>
+        </li>
+  
+        
+        <ul class="navbar-nav">
+          {% if not request.user.is_staff and not request.user.doctor and not request.user.patient %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login 
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/hospital/admin_login">Admin</a>
+              <a class="dropdown-item" href="/hospital/signup">Doctor</a>
+              <a class="dropdown-item" href="/hospital/patient_signup">Patient</a>
+            </div>
+          </li>
+          {% endif %}
+  
+        <li class="nav-item">
+          <a class="nav-link" href="/hospital/contact">Contact Us</a>
+        </li>
+        
+        {% if request.user.is_staff or request.user.doctor or request.user.patient%}
+         {% if not request.user.doctor and not request.user.patient %}
+        <li class="nav-item">
+          <a class="nav-link" href="/hospital/admin_pag">Dashboard</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Doctor 
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/hospital/View_doctor">View Doctor</a>
+              <a class="dropdown-item" href="/hospital/add_doctor">Add Doctor</a>
+            </div>
+          </li>
+        {% endif %}
+        {% if not request.user.patient and not request.user.is_staff %}
+        <li class="nav-item">
+          <a class="nav-link" href="/hospital/dindex">Doc Dashboard</a>
+        </li>
+        {% endif %}
+        {% if not request.user.patient %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Patient 
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/hospital/View_patient">View Patients</a>
+              <a class="dropdown-item" href="/hospital/add_patient">Add Patients</a>
+              
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Appointment 
+              </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/hospital/View_appointment">View Appointment </a>
+              <a class="dropdown-item" href="/hospital/add_appointment">Add Appointment </a>
+              
+            </div>
+          </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/hospital/logout">logout</a>
+        </li>
+        
+        {% endif %}
+        
+        
+
+      </ul>
+      
+      
+  </button>
+    </div>
+  </nav>

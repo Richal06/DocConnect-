@@ -1,0 +1,215 @@
+{% include 'base1.html' %}
+{% load static %}
+{% include 'nav.html' %}  
+{% block content %}
+<style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        header {
+            background-color: #343A40;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #222;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .welcome-text {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .feature {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-width: 200px;
+            background-color: white;
+            filter: grayscale(100%);
+        }
+        .feature img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        .doctors {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .doctor {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            background-color: white;
+            filter: grayscale(100%);
+        }
+        .doctor img {
+            max-width: 80px;
+            border-radius: 50%;
+        }
+</style>
+<header>
+    <h1>Welcome to the Hospital Management System</h1>
+</header>
+<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-slider" data-slide-to="1"></li>
+        <li data-target="#carousel-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://thumbs.dreamstime.com/b/group-hospital-doctors-over-health-care-clinic-background-89857953.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-white">
+                <div class="background-1">
+                    <h2>Postoperative Care</h2>
+                    <p>Postoperative care is the care you receive after a surgical procedure. The type of postoperative
+                        care you need depends on the type of surgery you have, as well as your health history. It often
+                        includes pain management and wound care.
+                    </p>
+                    <button class="btn btn-light"><a href="#departments" class="nav-link">See All Services</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://globalnews.ca/wp-content/uploads/2019/06/operation.jpg?quality=85&strip=all" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-white">
+                <div class="background-1">
+                    <h2>Surgery</h2>
+                    <p>Surgery is a medical specialty that uses operative manual and instrumental techniques on a person
+                        to investigate or treat a pathological condition such as a disease or injury, to help improve
+                        bodily function or appearance or to repair unwanted ruptured areas.
+                    </p>
+                    <button class="btn btn-light"><a href="#departments" class="nav-link">See All Services</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://medicalandhealthcare.com/wp-content/uploads/2016/05/Neonatal-Intensive-Care-Nurse.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption text-white">
+                <div class="background-1">
+                    <h2>Neonatal intensive care unit</h2>
+                    <p>A neonatal intensive care unit, also known as an intensive care nursery, is an intensive care
+                        unit specializing in the care of ill or premature newborn infants. Neonatal refers to the first
+                        28 days of life. Neonatal care, as known as specialized nurseries or intensive care, has been
+                        around since the 1960s.
+                    </p>
+                    <button class="btn btn-light"><a href="#departments" class="nav-link">See All Services</a></button>
+                </div>
+
+                
+                <div class="background-2">
+
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="Images/1_1_1_1.png">
+        </div>
+        <div class="col-md-4" id="intro-text">
+            <h1 class="text-center">
+                <h1 class="text-center">Welcome to hospital management system </h1>
+            </h1>
+            <p class="">
+            <h5>The Hospital Management System at Bennett University offers a comprehensive range of services, catering to a diverse array of medical needs. Situated within the esteemed grounds of Bennett University, this advanced facility is equipped with state-of-the-art technologies and staffed by highly reputed surgeons and specialists. From cutting-edge radiography services to a diverse team of specialized surgeons, this hospital ensures top-tier care and treatment for all patients. Whether it's diagnostics, surgeries, or expert medical consultations, the hospital stands as a beacon of quality healthcare, committed to serving the community and beyond</h5>
+            </p>
+          
+        </div>
+    </div>
+</div>
+
+<!---------------------Inroduction Section End---------------------->
+<div class="container">
+        
+
+    <div class="features">
+        <div class="feature">
+            <h3>Appointments</h3>
+            <p>Schedule and manage appointments</p>
+        </div>
+        <div class="feature">
+            <h3>Patients</h3>
+            <p>Manage patient records and details</p>
+        </div>
+        <div class="feature">
+            <h3>Staff</h3>
+            <p>Manage information about hospital staff</p>
+        </div>
+        
+
+    <h2>Our Services</h2>
+    <p>We provide a wide range of services including emergency care, diagnostics, surgeries, and more.</p>
+    
+    <h2>Meet Our Doctors</h2>
+    <div class="doctors">
+        <div class="doctor">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKA5_f8dX__-TOqDaUjPYnhl1yDa7yrTfmzyS1vkhhgwFXSFH97NqRFlJPmVjnPuIR4mo&usqp=CAU" alt="Doctor 1">
+            <h3>Dr. Emily Johnson</h3>
+            <p>Specialization: Cardiology</p>
+        </div>
+        <div class="doctor">
+            <img src="data:image/jpeg;base64,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" alt="Doctor 2">
+            <h3>Dr. Michael Rodriguez</h3>
+            <p>Specialization: Neurology</p>
+        </div>
+        <div class="doctor">
+            <img src="data:image/jpeg;base64,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 " alt="Doctor 3">
+            <h3>Dr. Sarah Lee</h3>
+            <p>Specialization: Pediatrics</p>
+        </div>
+        <div class="doctor">
+            <img src="https://www.jaypeehealthcare.com/sites/default/files/Dr-Sharad-Dev.jpeg" alt="Doctor 4">
+            <h3>Dr. David Patel</h3>
+            <p>Specialization: Orthopedics</p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content%}

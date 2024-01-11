@@ -1,0 +1,35 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+
+{% block content %}
+<style>
+    .about-us {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+</style>
+
+<div class="container">
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to the Hospital Management System. We are committed to providing exceptional healthcare services and ensuring the well-being of our patients.</p>
+        <p>Our team comprises experienced doctors, nurses, and support staff dedicated to delivering the best possible care.</p>
+        <p>At our facility, we offer a wide range of services, including emergency care, diagnostics, surgeries, and specialized treatments.</p>
+        <p>We focus not only on curing diseases but also on preventive care and patient education to promote healthy living.</p>
+        <p>Our commitment extends to investing in the latest technology and medical advancements to ensure accurate diagnostics and effective treatments.</p>
+        <p>We believe in a patient-centric approach, striving for empathy, respect, and excellence in all our interactions with patients and their families.</p>
+    </div>
+
+    
+</div>
+
+{% endblock content %}

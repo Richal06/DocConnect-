@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>DocConnect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="C:\Users\Rakshit_PC\OneDrive\Desktop\college\dti\style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/207e1cb8-53a9-4550-8b3b-4ebe59020096/webchat/config.js" defer></script>
+<style>
+
+.carousel-inner img{
+  width:100%;
+  height:90vh;
+  object-fit: cover;
+  color: red;
+}
+
+.row2 img{
+  width:100%;
+  height:60vh;
+  object-fit:cover;
+}
+
+.row3 img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  background-color: orange;
+}
+
+
+.pic_box_title img {
+  position: relative;
+  z-index: 0;
+}
+
+.pic_box_title p {
+  position: relative;
+  z-index: 2;
+}
+
+.box2 {
+  position: relative;
+  background-color: #FFCCCC;
+  width: 400px;
+  height: 300px;
+  bottom: 150px;
+  left: 150px;
+}
+.box3{
+  position: relative;
+  background-color: #FFCCCC;
+  width: 400px;
+  height: 500px;
+  bottom: 150px;
+  left: 150px;
+}
+
+.product_item {
+  background-color: #f7dfa0;
+  height: 350px;
+  margin:5px;
+}
+
+.img-md {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.pic_title_hover :hover {
+  background-color: gray;
+  opacity: 0.4;
+  border: 1 solid white;
+  padding: 20px;
+}
+
+.pic_title_hover p {
+  display: none;
+}
+
+.pic_title_hover :hover {
+  display: show;
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hvr-glow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+  text-align:center;
+  padding:20px;
+}
+#katalog {
+  display:flex;
+  place-content:center;
+}
+.card {
+  margin:10px;
+}
+#blog{
+  text-align:center;
+  padding:10px;
+}
+/* kontak */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.kontak-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+/* akhir kontak */
+
+/* sosial media footer */
+.social-icons  {
+  float:left;
+}
+.social-icons i {
+  margin:10px;
+}
+h4 {
+  padding-left:50px;
+}
+.social-icons i:hover {
+  background-color:lightblue;
+  border-radius:100%;
+  opacity:50%;
+}
+
+
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 15px;
+  min-width: 0;
+  outline: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.carousel-inner img{
+  border-radius: 108px;
+}
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.navbar-brand{
+  font-family: 'Vina Sans', sans-serif;
+  font-size: 26px;
+}
+body{
+  background-color: #EEF5FF;
+}
+.carousel-caption{
+  color: rgb(207 237 236);
+}
+#bla{
+  border-radius: 100px;
+}
+
+</style>
+
+  </head>
+
+  <body>
+
+    <!--header-->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white"> -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#" >DocConnect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  BOOK
+                </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#ll">APPOINTMENTS</a>
+                <a class="dropdown-item" href="/shop">MEDICINES</a>
+                <a class="dropdown-item" href="C:\Users\Rakshit_PC\OneDrive\Desktop\college\video.html">VIDEO CALL</a>
+                
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/about">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/contact">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"href="/graph/graph">Tracker </a>
+            </li>
+            {% comment %} <li"nav-item">
+              {% comment %} <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a> {% endcomment %}
+            {% comment %} <button class="button-27" role="button"><a href='http://127.0.0.1:8000/login/'>Logout</a></button>
+          </li> {% endcomment %} 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Hero-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://plus.unsplash.com/premium_photo-1661281397737-9b5d75b52beb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80 " alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <p style="font-size:120px">DocConnect</p>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 " src="https://mobisoftinfotech.com/resources/wp-content/uploads/2018/07/Banner-1.png" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <p style="font-size:110px">RICHA</p> -->
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2015/08/childTakeMedicine-614860746-770x533-1-745x490.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <!-- <p style="font-size:120px">Medicine</p> -->
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!--row 1-->
+    <div class="container mt-3">
+      <h2 class="text-center mt-5 w3-animate-left row1-content" id="deskripsi">
+        Welcome to our innovative healthcare project! Our goal is to revolutionize the way people access and receive medical care. Our platform provides a convenient and easy-to-use solution for booking doctor appointments online, finding doctors in your area, and even ordering medicine online from nearby medical stores. We also offer a chatbot feature that predicts diseases based on symptoms and provides suggested treatments and doctors. We understand the importance of quick and accessible medical care, and our platform aims to deliver just that. With our platform, you can take control of your health and receive the care you need, right at your fingertips.
+      </h2>
+      <p class="text-center w3-animate-left mt-4">
+        Our Services:
+      </p>
+    </div>
+
+    <!--row2-->
+    <div class="container-fulid" style="background-color:#EFD2CB">
+      <div class="container row2">
+        <div class="row">
+          <div class="col my-5"><a href="http://127.0.0.1:7860">
+            <img class="hvr-grow" id=" bla" style="width:100%; border-radius: 100px;"src="https://techcult.com/wp-content/uploads/2022/02/Best-AI-Chatbot-Online-2.jpg"></a>
+            <p class="h3 text-center">Chatbot</p>
+            <p class="text-center">
+it is easier for patients to access medical care and book appointments with doctors, without the need to physically visit a clinic or hospital.
+</p>
+          </div>
+
+          <div class="col my-5"><a href="C:\Users\Rakshit_PC\OneDrive\Desktop\college\video.html">
+            <img class="hvr-grow" id=" bla" style="width:100%; border-radius: 100px;" src="https://plus.unsplash.com/premium_photo-1661549573945-a15b1d89ce38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 "></a>
+            <p class="h3 text-center">Doctor video call
+</p>
+            <p class="text-center">We are also adding a video call feature here which is a highly innovative idea, by providing patients with this option to have virtual appointments with doctors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--row3-->
+    
+  
+    <div class="container-fulid">
+      <div class="container">
+        <div class="row ">
+
+          <div class="col-4 my-5">
+            <div class="pic_box_title">
+              <img class="w3-opacity-min" id="ll" src="https://image.freepik.com/free-vector/people-using-online-appointment-booking-app_74855-5556.jpg">
+            </div>
+          </div>
+
+          <div class="col-8" style="margin-top: 150px;">
+            <p class="h3 text-center animated animate">Book and CALL</p>
+            <p class="text-center">
+             BOOK AN APPOINTMENT</p>
+            <center>
+              
+              <button class="btn btn-dark lead text-center"><a href="/hospital">Book Now</a></button>
+            </center>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--Blog-->
+    <div class="container-fulid">
+      <div class="row">
+          <div class="col-7">
+           <img id="piaynemo" class="w3-opacity-min" src="" width="200%">
+            <div class="pic_box_title">
+              <div class="box2 d-flex">
+                <p id="blog"><strong>Appointment</strong>The appointment booking feature allows patients to easily schedule appointments with their chosen doctors through the "docConnect" platform. Patients can browse through a list of available doctors, view their schedules, and select a convenient date and time for their appointment.
+                Once the appointment is confirmed, patients receive a notification via email or SMS with the appointment details, including the doctor's name, date, time, and location (if it's an in-person appointment). Patients can also reschedule or cancel their appointments through the platform if necessary. </p>
+              </div>
+            </div>
+         </div>
+
+          <div class="col-5">
+            <div class="row" style="height:30%">
+            </div>
+            <div class="row" style="height:30%"></div>
+          </div>
+       </div>
+     </div>
+     <!--medi-->
+     <div class="container-fulid" style="background-color:#EFD2CB">
+       <div class="container row2">
+         <div class="row">
+
+
+           <a href="/shop">
+             <img  class="hvr-grow" style="width:100%; height:100%;" src="https://medlineplus.gov/images/Medicines_share.jpg"></a>
+             <p class="h3 text-center" id="wayag">Buy Your Medicines Here !!!!!
+
+ </p>
+             <p class="text-center" >our selling medicine feature provides a hassle-free and convenient way for users to purchase medicines and healthcare products online, from the comfort of their homes.</p>
+<button class="btn btn-dark"><a href="/shop">Buy Now</a></button>
+         </div>
+       </div>
+     </div>
+    <!--blog2-->
+
+
+
+
+
+
+
+
+
+    <!--kontak form-->
+<h3 id="sesi-kontak">Taking Care of You Since — Well, Beginning of Time!</h3>
+
+<div class="kontak-container">
+  <form action="/action_page.php">
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Name">
+    <label for="lname">Email</label>
+    <input type="text" id="lname" name="lastname" placeholder="Email">
+
+    <label for="asal">Mobile Number</label>
+    <input type="text" name="" value=''>
+
+
+    </select>
+
+    <label for="subject">Description</label>
+    <textarea id="subject" name="subject" placeholder="Describe your problem" style="height:200px"></textarea>
+
+    <input type="submit" value="SUBMIT">
+  </form>
+</div>
+<!--akhir kontak-->
+
+    <!-- <footer style="background-color: black;height:180px;margin-top: 50px;">
+      <p class="text-center" style="color:white">Copyright: DocConnect</p>
+      <div class="social-media">
+        <h4>Find Us On</h4>
+        <ul class="social-icons">
+           <i class="fab fa-facebook fa-3x"></i>
+           <i class="fab fa-instagram fa-3x"></i>
+           <i class="fab fa-twitter fa-3x"></i>
+           <i class="fas fa-envelope fa-3x"></i>
+        </ul>
+
+      </div>
+    </footer> -->
+    <footer style="background-color: #EEF5FF; height: 220px; padding-top: 40px;">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h4 style="color: black;">Stay Connected</h4>
+                  <p style="color: #aaaaaa;">Join our newsletter for the latest updates and health tips.</p>
+                  <form action="#" method="post" class="subscribe-form">
+                      <!-- <input type="email" name="email" placeholder="Your Email" required> -->
+                      <!-- <button type="submit">Subscribe</button> -->
+                  </form>
+              </div>
+              <div class="col-md-4">
+                  <h4 style="color: black;">Find Us On</h4>
+                  <ul class="social-icons">
+                      <li><a href="#" class="fab fa-facebook-f"></a></li>
+                      <li><a href="#" class="fab fa-instagram"></a></li>
+                      <li><a href="#" class="fab fa-twitter"></a></li>
+                      <li><a href="#" class="fas fa-envelope"></a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <h4 style="color: black;">Important Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="/shop/about">About Us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms and Conditions</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom text-center" style="margin-top: 30px; background-color: black;">
+          <p style="color: #aaaaaa;">Copyright &copy; 2023 DocConnect. All rights reserved.</p>
+          <p style="color: #aaaaaa;">Designed by R&R</p>
+      </div>
+  </footer>
+  
+
+
+
+    </body>
+</html>

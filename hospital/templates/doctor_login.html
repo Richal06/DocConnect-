@@ -1,0 +1,81 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+
+{% block content %}
+ <style>
+    .login-content {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .login-container h2 {
+        color: #000;
+    }
+
+    .login-container label {
+        color: #000;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"],
+    .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .login-container input[type="submit"] {
+        background-color: #000;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+{% if error == "no" %}
+<script>
+    alert('Logged in Successfully');
+    window.location = "/hospital/pindex";
+</script>
+{% endif %}
+{% if error == "yes" %}
+<script>
+    alert('Invalid login, please try again');
+</script>
+{% endif %}
+
+<div class="login-content">
+    <div class="login-container">
+        <h2>Doctor Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>Username</label>
+            <input type="text" name="username">
+            <label>Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+
+{% endblock %} 

@@ -1,0 +1,53 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+{% block content %}
+<style>
+    .Container {
+        padding: 0 100px;
+    }
+
+    input[type="submit"] {
+        padding-top: 10px;
+        background-color: black;
+        color: white; /* Change the button text color to black */
+        border: 1px solid black; /* Adding border for button visibility */
+        padding: 10px;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif; /* Change the font */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #f0f0f0; /* Hover color */
+    }
+</style>
+    {% if error == "no" %}
+        <script>
+            alert('Record Save Successfully');
+            window.location = "/hospital/View_patient";
+        </script>
+    {% endif %}
+    
+    {% if error == "yes" %}
+        <script>
+            alert('Incomplete details, please try again');
+        </script>
+    {% endif %}
+
+    <div class="Container">
+        <h2 class='text-center'>Add Patient</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label> Patient Name</label>
+            <input type="text" class="form-control" name='name'>
+            <label> Mobile</label>
+            <input type="number" class="form-control" name='mobile'>
+            <label> Gender</label>
+            <input type="text" class="form-control" name='gender'>
+            <label> Problem</label>
+            <input type="text" class="form-control" name='Problem'>
+            <label> Address</label>
+            <input type="text" class="form-control" name='address'>
+            <input type="submit" value="Submit" class="form-control btn btn-primary">
+        </form>
+    </div>
+{% endblock %}

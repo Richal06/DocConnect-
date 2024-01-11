@@ -1,0 +1,76 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+{% block content %}
+<style>
+    .Container{
+        padding: 0 100px;
+    }
+    hr.rounded {
+        border-top: 10px solid #000;
+        border-radius: 5px;
+    }
+
+    .contactdiv {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        text-align: center;
+        margin: 20px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .contactdiv:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(-20px);
+    }
+
+    .contactdiv h2 {
+        color: #000;
+    }
+
+    .contactdiv a {
+        text-decoration: none;
+    }
+
+    .contactdiv h4 {
+        color: #000;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+
+<h1 class="text-center" style="color: #000;">Doctor Dashboard</h1>
+<div style="margin-top: 20px;">
+    {% if request.user.is_authenticated %}
+        <p style="font-weight: bold;">User ID: {{ request.user.id }}</p>
+        <p>UserName: {{ request.user.username }}</p>
+        <p>Doctor: {{ request.user.doctor.Name }}</p>
+        {% if request.user.doctor %}
+            <p style="color: green;">Is Medical Staff: {{ request.user.doctor.is_medical_staff }}</p>
+        {% endif %}
+    {% else %}
+        <p style="color: red; font-weight: bold;">Not authenticated</p>
+    {% endif %}
+</div>
+
+<div class="Container">
+    <div class="contact-container">
+        <div class="contactdiv col-sm-4">
+            <h2 style="color: #000;">{{ d.p }}</h2>
+            <a href="/hospital/View_patient"><h4>Patient</h4></a>
+            <hr class="rounded">
+        </div>
+        <div class="contactdiv col-sm-4">
+            <h2 style="color: #000;">{{ d.a }}</h2>
+            <a href="/hospital/View_appointment"><h4>Appointments</h4></a>
+            <hr class="rounded">
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

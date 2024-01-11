@@ -1,0 +1,47 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+<style>
+    .contactdiv:hover{
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(-20px);}
+    .contactdiv {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        transition: all 0.3s ease-in-out;
+  }
+    .contactdiv h4 {
+      font-weight: bold;
+  }
+  
+  .row {
+      display: flex;
+      justify-content: space-between;
+  }
+</style>
+{% block content %}
+<h1 class="text-center">Contact us</h1>
+<div class="container text-center" style="margin-top:50px">
+    <div class="row mt-5 textcenter">
+      <div class="col-lg-3 col-sm-6 contactdiv">
+        <h4 ><i class='fas fa-phone-square'></i>Contact</h4>
+        <p class="text-danger font-weight-bold mt-3"><a href="tel:+910000000000">+910000000000</a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 contactdiv">
+        <h4><i class='fa fa-envelope'></i>Send Email</h4>
+        <p class="font-weight-bold mt-3"><a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 contactdiv">
+        <h4><i class='fa fa-address-card'></i>Office Address</h4>
+        <p class="font-weight-bold mt-3"><a href="https://www.google.com/maps/place/Bennett+University+(Times+of+India+Group)/@28.4506465,77.5816229,17z/data=!3m1!4b1!4m6!3m5!1s0x390cbf94deb6bc39:0x7ba6bedc9a2b537f!8m2!3d28.4506465!4d77.5841978!16s%2Fg%2F11c3wvm4q_?entry=ttu">Bennett University</a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 contactdiv">
+        <h4><i class='fa fa-clock-o'></i>Customer care time</h4>
+        <p class="font-weight-bold mt-3">24X7 Call Service</p>
+      </div>
+    </div>
+  </div>
+  
+{% endblock content%}

@@ -1,0 +1,60 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+{% block content %}
+<style>
+    .Container {
+        padding: 0 100px;
+    }
+
+    input[type="submit"] {
+        padding-top: 10px;
+        background-color: black;
+        color: white; /* Change the button text color to black */
+        border: 1px solid black; /* Adding border for button visibility */
+        padding: 10px;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif; /* Change the font */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #f0f0f0; /* Hover color */
+    }
+</style>
+    {% if error == "no" %}
+        <script>
+            alert('Record Save Successfully');
+            window.location = "/hospital/View_appointment";
+        </script>
+    {% endif %}
+    
+    {% if error == "yes" %}
+        <script>
+            alert('Incomplete details, please try again');
+        </script>
+    {% endif %}
+
+    <div class="Container">
+        <h2 class='text-center'>Add Appointment</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>Patient Name</label>
+<select name="patient" class="form-control">
+    {% for i in patients %}
+    <option value="{{ i.Name }}">{{ i.Name }}</option>
+    {% endfor %}
+</select>
+
+<label>Doctor Name</label>
+<select name="doctor" class="form-control">
+    {% for i in doctors %}
+    <option value="{{ i.Name }}">{{ i.Name }}</option>
+    {% endfor %}
+</select>
+            <label> Date</label>
+            <input type="date" class="form-control" name='date'>
+            <label> Time</label>
+            <input type="time" class="form-control" name='time'>
+            <input type="submit" value="Submit" class="form-control btn btn-primary">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+{% block content %}
+<style>
+    .Container {
+        padding: 0 100px;
+    }
+
+    input[type="submit"] {
+        padding-top: 10px;
+        background-color: black;
+        color: white; /* Change the button text color to black */
+        border: 1px solid black; /* Adding border for button visibility */
+        padding: 10px;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif; /* Change the font */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #f0f0f0; /* Hover color */
+    }
+</style>
+
+<div class="Container">
+    <h2 class='text-center'>Add Doctor</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Doctor Name</label>
+        <input type="text" id="name" name='name' class="form-control">
+
+        <label for="mobile">Mobile</label>
+        <input type="number" id="mobile" name='mobile' class="form-control">
+
+        <label for="Special">Specialization</label>
+        <input type="text" id="Special" name='Special' class="form-control">
+
+        <input type="submit" value="Submit" class="form-control btn btn-primary">
+    </form>
+</div>
+
+{% if error == "no" %}
+    <script>
+        alert('Record Save Successfully');
+        window.location = "/hospital/View_doctor";
+    </script>
+{% endif %}
+
+{% if error == "yes" %}
+    <script>
+        alert('Invalid login, please try again');
+    </script>
+{% endif %}
+
+{% endblock %}

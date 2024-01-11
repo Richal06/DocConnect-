@@ -1,0 +1,96 @@
+{% include 'base1.html' %}
+{% include 'nav.html' %}
+
+{% block content %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    .signup-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .signup-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 280px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .signup-container:hover {
+        transform: scale(1.02);
+    }
+
+    .signup-container input,
+    .signup-container select {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .signup-container input[type="submit"] {
+        background-color: #000;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .signup-container input[type="submit"]:hover {
+        background-color: #333;
+    }
+
+    .signup-container a {
+        display: block;
+        margin-top: 10px;
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .signup-container a:hover {
+        color: #555;
+    }
+</style>
+{% if error == "no" %}
+        <script>
+            alert('Record Save Successfully');
+            window.location = "/hospital/doctor_login";
+        </script>
+    {% endif %}
+    
+    {% if error == "yes" %}
+        <script>
+            alert('Something went wrong, please try again');
+        </script>
+    {% endif %}
+
+<div class="signup-content">
+    <div class="signup-container">
+        <h2>Doctor Signup</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name">
+            <input type="number" name="mobile" placeholder="Mobile">
+            <input type="text" name="yoe" placeholder="Yrs of Exp">
+            <input type="text" name="specialization" placeholder="Specialization">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Sign Up">
+        </form>
+        <a href="/hospital/doctor_login">Already have an account? Login here</a>
+    </div>
+</div>
+{% endblock %}
