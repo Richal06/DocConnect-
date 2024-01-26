@@ -33,3 +33,26 @@ DocConnect is a web application designed to offer far-flung access to healthcare
 We are making a web platform that specializes in connecting patients with doctors for appointments, this means a seamless connection between the 2 events, making it smooth for patients to discover and book appointments with their desired clinical practitioners. By supplying both appointment reserving and video call capabilities also includes health monitoring system, we're making it convenient for patients to access scientific consultations from the consolation of their own homes. With Doc Connect, you now not must undergo the trouble of journeying a couple of websites to discover the right health practitioner, ebook an appointment, and order medicine. Our platform gives a unbroken and handy revel in, making it easy as a way to take control of your healthcare.
 The chatbot feature that predicts sicknesses primarily based on signs and symptoms and indicates primary medicines is a novel and revolutionary application of synthetic intelligence in healthcare. This function can assist improve affected person consequences and decrease the value of healthcare by way of presenting quick and correct diagnoses and medicine tips.
 
+## Start the project
+Step 1: Clone the Repository
+git clone https://github.com/Richal06/DocConnect-.git
+
+Step 2: Navigate to the Project Directory
+cd mycart
+
+Step 3: Install Dependencies
+Make sure you have Python and pip installed. Then, run the following command to install the project dependencies.
+
+pip install -r requirements.txt
+
+Step 4: Apply Migrations
+
+python manage.py makemigrations
+Step 5: Execute Migrations
+
+python manage.py migrate
+Step 6: Run the Development Server
+
+python manage.py runserver
+
+Open your web browser and go to http://127.0.0.1:8000/ to access the application.
