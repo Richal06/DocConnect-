@@ -38,6 +38,7 @@ Step 1: Clone the Repository
 git clone https://github.com/Richal06/DocConnect-.git
 
 Step 2: Navigate to the Project Directory
+
 cd mycart
 
 Step 3: Install Dependencies
@@ -48,9 +49,11 @@ pip install -r requirements.txt
 Step 4: Apply Migrations
 
 python manage.py makemigrations
+
 Step 5: Execute Migrations
 
 python manage.py migrate
+
 Step 6: Run the Development Server
 
 python manage.py runserver
