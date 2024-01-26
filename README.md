@@ -35,6 +35,7 @@ The chatbot feature that predicts sicknesses primarily based on signs and sympto
 
 ## Start the project
 Step 1: Clone the Repository
+
 git clone https://github.com/Richal06/DocConnect-.git
 
 Step 2: Navigate to the Project Directory
